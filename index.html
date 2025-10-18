@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Zahier!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Pacifico&display=swap');
+
+        :root {
+            --primary-color: #6a1b9a; /* Deep Purple */
+            --secondary-color: #e040fb; /* Bright Pink */
+            --accent-color: #ffab00; /* Amber */
+            --background-color: #f3e5f5; /* Light Purple */
+            --text-color: #4a148c; /* Very Dark Purple */
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            overflow-x: hidden;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .card-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px var(--shadow-color), 0 5px 15px var(--shadow-color);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 30px 20px;
+            box-sizing: border-box;
+        }
+
+        .card-header {
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-family: 'Pacifico', cursive;
+            font-size: 3.5em;
+            color: var(--accent-color);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 30px;
+        }
+
+        .message {
+            font-size: 1.1em;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 500px;
+        }
+
+        .message p {
+            margin-bottom: 15px;
+        }
+
+        .message p:last-child {
+            margin-bottom: 0;
+        }
+
+        .signature {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.8em;
+            color: var(--accent-color);
+            margin-top: auto; /* Pushes signature to the bottom */
+        }
+
+        /* Confetti animation */
+        .confetti {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .confetti::before,
+        .confetti::after {
+            content: '';
+            position: absolute;
+            background-color: var(--accent-color);
+            opacity: 0.8;
+            border-radius: 50%;
+        }
+
+        .confetti::before {
+            width: 15px;
+            height: 15px;
+            animation: confetti-fall 5s infinite ease-in-out;
+            animation-delay: -2s;
+        }
+
+        .confetti::after {
+            width: 10px;
+            height: 10px;
+            animation: confetti-fall 7s infinite ease-in-out;
+            animation-delay: -4s;
+            background-color: var(--secondary-color);
+        }
+
+        .confetti span {
+            position: absolute;
+            background-color: var(--accent-color);
+            opacity: 0.7;
+            border-radius: 50%;
+            animation: confetti-fall 6s infinite ease-in-out;
+        }
+
+        .confetti span:nth-child(2) {
+            width: 12px;
+            height: 12px;
+            animation-delay: -3s;
+            background-color: var(--secondary-color);
+        }
+
+        .confetti span:nth-child(3) {
+            width: 8px;
+            height: 8px;
+            animation-delay: -1s;
+        }
+
+        .confetti span:nth-child(4) {
+            width: 18px;
+            height: 18px;
+            animation-delay: -5s;
+            background-color: var(--accent-color);
+        }
+
+        .confetti span:nth-child(5) {
+            width: 14px;
+            height: 14px;
+            animation-delay: -6s;
+            background-color: var(--secondary-color);
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-200%) rotate(0deg);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.8em;
+            }
+            .subtitle {
+                font-size: 1em;
+            }
+            .message {
+                font-size: 1em;
+            }
+            .signature {
+                font-size: 1.5em;
+            }
+            .card-container {
+                padding: 25px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 2.2em;
+            }
+            .subtitle {
+                font-size: 0.9em;
+            }
+            .message {
+                font-size: 0.95em;
+            }
+            .signature {
+                font-size: 1.3em;
+            }
+            .card-container {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="card-container">
+        <div class="confetti">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <header class="card-header">
+            <h1 class="title">Happy Birthday</h1>
+            <p class="subtitle">To the amazing Zahier!</p>
+        </header>
+
+        <section class="message">
+            <p>Wishing you a day filled with joy, laughter, and all the things you love most.</p>
+            <p>May this year bring you new adventures, exciting opportunities, and unforgettable memories.</p>
+            <p>You're a truly special person, and you deserve all the happiness in the world.</p>
+        </section>
+
+        <footer class="signature">
+            With love and best wishes,
+            <br>
+            Your Friend
+        </footer>
+    </main>
+
+    <script>
+        // Add a few more confetti elements dynamically for better coverage
+        const confettiContainer = document.querySelector('.confetti');
+        const numberOfConfetti = 20; // Adjust as needed
+
+        for (let i = 0; i < numberOfConfetti; i++) {
+            const confettiSpan = document.createElement('span');
+            const size = Math.random() * 15 + 5; // Random size between 5px and 20px
+            confettiSpan.style.width = `${size}px`;
+            confettiSpan.style.height = `${size}px`;
+            confettiSpan.style.left = `${Math.random() * 100}%`;
+            confettiSpan.style.animationDelay = `-${Math.random() * 7}s`; // Random start delay
+            confettiSpan.style.backgroundColor = Math.random() > 0.5 ? '#e040fb' : '#ffab00'; // Pink or Amber
+            confettiContainer.appendChild(confettiSpan);
+        }
+    </script>
+
+</body>
+</html>
